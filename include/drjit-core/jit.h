@@ -110,6 +110,8 @@ enum JitBackend {
  * testcases.
  */
 extern JIT_EXPORT void
+// the marcro is defined as JIT_DEF(X) = X
+// the function is equivalent to jit_init(uint32_t backends = ((uint32_t) JitBackend::CUDA | (uint32_t) JitBackend::LLVM));
 jit_init(uint32_t backends JIT_DEF((uint32_t) JitBackend::CUDA |
                                    (uint32_t) JitBackend::LLVM));
 
